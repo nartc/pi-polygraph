@@ -4,6 +4,7 @@
 	"private": true,
 	"description": "Polygraph for Pi: the Polygraph MCP server, a confirmation before anything that publishes, and a session binding that survives compaction and resume.",
 	"type": "module",
+	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/nartc/pi-polygraph.git"
