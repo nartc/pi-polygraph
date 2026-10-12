@@ -1,0 +1,36 @@
+{
+	"name": "pi-polygraph",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Polygraph for Pi: the Polygraph MCP server, a confirmation before anything that publishes, and a session binding that survives compaction and resume.",
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nartc/pi-polygraph.git"
+	},
+	"keywords": [
+		"pi-package"
+	],
+	"scripts": {
+		"test": "node --test \"test/*.test.ts\"",
+		"typecheck": "tsc --noEmit",
+		"check": "npm run typecheck && npm test"
+	},
+	"pi": {
+		"extensions": [
+			"./extensions/polygraph/index.ts"
+		],
+		"skills": [
+			"./skills"
+		]
+	},
+	"peerDependencies": {
+		"@earendil-works/pi-coding-agent": "*"
+	},
+	"devDependencies": {
+		"@earendil-works/pi-coding-agent": "1.1.0",
+		"@polygraph/mcp": "0.3.1",
+		"@types/node": "^24.0.0",
+		"typescript": "^7.0.0"
+	}
+}
